@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>groupByLength</title>
+</head>
+<body>
+<pre><script>
+
+function groupByLength(arr) {
+
+    let result = {};
+    for (let word of arr) {
+
+        let len = word.length;
+
+        if (!result[len]) {
+            result[len] = [];
+        }
+
+        result[len].push(word);
+    }
+
+    return result;
+}
+
+let words = ["hi", "cat", "dog", "apple"];
+let grouped = groupByLength(words);
+
+document.write(JSON.stringify(grouped, null, 2));
+
+</script></pre>
+</body>
+</html>
+```
+
