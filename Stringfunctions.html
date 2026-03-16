@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Exercises</title>
+</head>
+<body>
+<pre><script>
+
+// ============ BASIC EXERCISES ============
+
+// 1. Concatenation
+let a = "Hello";
+let b = "World";
+document.write("1. " + a + " " + b + "\n\n");
+
+// 2. String Length
+let s2 = "JavaScript";
+document.write("2. " + s2.length + "\n\n");
+
+// 3. Access First Character
+let s3 = "Programming";
+document.write("3. " + s3[0] + "\n\n");
+
+// 4. Extract Part of a String
+let s4 = "coding is fun";
+document.write("4. " + s4.slice(0, 6) + "\n\n");
+
+// 5. Replace Characters
+let s5 = "cat";
+document.write("5. " + s5.replace("a", "e") + "\n\n");
+
+// 6. Convert to Uppercase
+let s6 = "javascript";
+document.write("6. " + s6.toUpperCase() + "\n\n");
+
+// 7. Split a String
+let s7 = "apple,banana,orange";
+document.write("7. " + JSON.stringify(s7.split(",")) + "\n\n");
+
+// 8. Join Array into String
+let arr8 = ["hello", "world"];
+document.write("8. " + arr8.join(" ") + "\n\n");
+
+// 9. Remove Extra Spaces
+let s9 = "  hello world  ";
+document.write("9. " + s9.trim() + "\n\n");
+
+// 10. Check if a Word Exists
+let s10 = "hello world";
+document.write("10. " + s10.includes("world") + "\n\n");
+
+// ============ INTERMEDIATE EXERCISES ============
+
+// 11. Reverse a String
+let s11 = "hello";
+let reversed11 = s11.split("").reverse().join("");
+document.write("11. " + reversed11 + "\n\n");
+
+// 12. Count Character Occurrences
+let s12 = "elephant";
+let count12 = s12.split("e").length - 1;
+document.write("12. " + count12 + "\n\n");
+
+// 13. Palindrome Check
+let s13 = "racecar";
+let reversed13 = s13.split("").reverse().join("");
+document.write("13. " + (s13 === reversed13) + "\n\n");
+
+// 14. Capitalize Each Word
+let s14 = "hello world";
+let result14 = s14.split(" ").map(w => w[0].toUpperCase() + w.slice(1)).join(" ");
+document.write("14. " + result14 + "\n\n");
+
+// 15. Format Number
+let n15 = 1234.5678;
+document.write("15. " + n15.toFixed(2) + "\n\n");
+
+// 16. Extract Numbers from String
+let s16 = "There are 3 apples and 2 oranges";
+document.write("16. " + JSON.stringify(s16.match(/\d+/g)) + "\n\n");
+
+// 17. Email Validation
+let email17 = "example@email.com";
+let isValid17 = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email17);
+document.write("17. " + isValid17 + "\n\n");
+
+// 18. Replace Word
+let s18 = "This is a bad word";
+document.write("18. " + s18.replace("bad", "good") + "\n\n");
+
+// 19. Remove Duplicate Characters
+let s19 = "aabbc";
+let result19 = [...new Set(s19)].join("");
+document.write("19. " + result19 + "\n\n");
+
+// 20. Sort Characters Alphabetically
+let s20 = "hello";
+let result20 = s20.split("").sort().join("");
+document.write("20. " + result20 + "\n\n");
+
+// ============ ADVANCED EXERCISES ============
+
+// 21. Check for Anagrams
+let a21 = "listen";
+let b21 = "silent";
+let sort21 = s => s.split("").sort().join("");
+document.write("21. " + (sort21(a21) === sort21(b21)) + "\n\n");
+
+// 22. Reverse Words in Sentence
+let s22 = "The quick brown fox";
+document.write("22. " + s22.split(" ").reverse().join(" ") + "\n\n");
+
+// 23. Find the Longest Word
+let s23 = "Web development is fascinating";
+let longest23 = s23.split(" ").reduce((a, b) => b.length > a.length ? b : a);
+document.write("23. " + longest23 + "\n\n");
+
+// 24. Advanced Palindrome
+let s24 = "A man, a plan, a canal, Panama!";
+let clean24 = s24.toLowerCase().replace(/[^a-z]/g, "");
+let rev24 = clean24.split("").reverse().join("");
+document.write("24. " + (clean24 === rev24) + "\n\n");
+
+// 25. Character Frequency
+let s25 = "mississippi";
+let freq25 = {};
+for (let c of s25) {
+    freq25[c] = (freq25[c] || 0) + 1;
+}
+document.write("25. " + JSON.stringify(freq25) + "\n\n");
+
+// 26. Replace Vowels with Numbers
+let s26 = "Hello World";
+let map26 = { a:"1", e:"2", i:"3", o:"4", u:"5" };
+let result26 = s26.replace(/[aeiou]/gi, v => map26[v.toLowerCase()]);
+document.write("26. " + result26 + "\n\n");
+
+// 27. startsWith
+let s27 = "JavaScript is fun";
+document.write("27. " + s27.startsWith("Java") + "\n\n");
+
+// 28. endsWith
+let s28 = "image.png";
+document.write("28. " + s28.endsWith("png") + "\n\n");
+
+// 29. repeat
+let s29 = "ha";
+document.write("29. " + s29.repeat(3) + "\n\n");
+
+// 30. indexOf
+let s30 = "Hello World";
+document.write("30. " + s30.indexOf("o") + "\n\n");
+
+</script></pre>
+</body>
+</html>
